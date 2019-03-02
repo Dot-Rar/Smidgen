@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+a:link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(173, 19, 19) !important;
+  text-decoration: none;
+}
+
+a:active {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.background {
+  background-color: #23272A;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.centre {
+  margin: 0;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.vertical-centre {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.horizontal-centre {
+  text-align:center;
+}
+
+.key {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 50px;
+  width: 300px;
+  background-color: rgb(140, 140, 140, 0.4);
+  border-radius: 0 0 0 5px;
+}
+
+.key-wrapper {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background-color: rgb(231, 231, 231, 0.6);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgb(231, 231, 231, 1) !important;
+  color: rgb(173, 19, 19) !important;
+  box-shadow: 0 5px 15px rgba(173, 19, 19, .4) !important;
+}
+
+#content {
+  border: none;
+  resize: none;
+  outline: none;
+
+  color: #e7e7e7;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+
+  width: 97%;
+  height: 95%;
+}

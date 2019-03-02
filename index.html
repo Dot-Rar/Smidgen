@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Smidgen</title>
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/regular.css" integrity="sha384-IG162Tfx2WTn//TRUi9ahZHsz47lNKzYOp0b6Vv8qltVlPkub2yj9TVwzNck6GEF" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+  </head>
+  <body class="background">
+    <form id="form" name="form" action="/new" method="post">
+    </form>
+
+    <div class="wrapper">
+      <textarea name="content" form="form" id="content" class="background centre"></textarea>
+    </div>
+
+    <div class="key">
+      <div class="key-wrapper">
+        <div class="vertical-centre">
+          <button class="btn" onclick="document.form.submit();">
+            <i class="fas fa-save fa-lg"></i> Save
+          </button>
+          <button class="btn">
+            <a href="/">
+              <i class="fas fa-plus-circle fa-lg"></i> New
+            </a>
+          </button>
+          <button class="btn" onclick="raw();">
+            <i class="fas fa-file fa-lg"></i> Raw
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.form.content.focus();
+
+      function raw() {
+        if(id != null) {
+          window.location.replace('/raw/' + id);
+        }
+      }
+    </script>
+  </body>
+</html>
