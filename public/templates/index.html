@@ -9,39 +9,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
   </head>
   <body class="background">
-    <form id="form" name="form" action="/new" method="post">
+    <form id="form" name="form" action="/new" method="get">
     </form>
 
     <div class="wrapper">
       <textarea name="content" form="form" id="content" class="background centre"></textarea>
     </div>
 
-    <div class="key">
+    <div class="key" style="width: 100px">
       <div class="key-wrapper">
         <div class="vertical-centre">
           <button class="btn" onclick="document.form.submit();">
             <i class="fas fa-save fa-lg"></i> Save
           </button>
-          <button class="btn">
-            <a href="/">
-              <i class="fas fa-plus-circle fa-lg"></i> New
-            </a>
-          </button>
-          <button class="btn" onclick="raw();">
-            <i class="fas fa-file fa-lg"></i> Raw
-          </button>
         </div>
       </div>
     </div>
-
-    <script>
-      document.form.content.focus();
-
-      function raw() {
-        if(id != null) {
-          window.location.replace('/raw/' + id);
-        }
-      }
-    </script>
   </body>
 </html>

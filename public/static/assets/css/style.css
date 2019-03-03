@@ -67,7 +67,6 @@ a:active {
   right: 0;
 
   height: 50px;
-  width: 300px;
   background-color: rgb(140, 140, 140, 0.4);
   border-radius: 0 0 0 5px;
 }
@@ -109,6 +108,8 @@ a:active {
   color: #e7e7e7;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+
+  white-space: pre-wrap;
 
   width: 97%;
   height: 95%;

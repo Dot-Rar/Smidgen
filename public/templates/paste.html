@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Smidgen</title>
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/regular.css" integrity="sha384-IG162Tfx2WTn//TRUi9ahZHsz47lNKzYOp0b6Vv8qltVlPkub2yj9TVwzNck6GEF" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+  </head>
+  <body class="background">
+
+    <div class="wrapper">
+      <p id="content" class="background centre">{{content}}</p>
+    </div>
+
+    <div class="key" style="width: 200px">
+      <div class="key-wrapper">
+        <div class="vertical-centre">
+          <button class="btn">
+            <a href="/">
+              <i class="fas fa-plus-circle fa-lg"></i> New
+            </a>
+          </button>
+          <button class="btn">
+            <a href="/raw/{{id}}">
+              <i class="fas fa-file fa-lg"></i> Raw
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
