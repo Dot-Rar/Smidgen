@@ -10,6 +10,6 @@
     "database": "smidgen"
   },
   "ratelimit": {
-    "pastes-per-hour": 1
+    "pastes-per-hour": 25
   }
 }
