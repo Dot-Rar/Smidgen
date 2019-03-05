@@ -4,14 +4,11 @@ import (
 	"Smidgen/config"
 	"Smidgen/http/handlers"
 	"Smidgen/http/ratelimit"
-	"github.com/didip/tollbooth"
-	"github.com/didip/tollbooth/limiter"
 	"github.com/qiangxue/fasthttp-routing"
 	"github.com/valyala/fasthttp"
 	"github.com/valyala/fasttemplate"
 	"io/ioutil"
 	"log"
-	"time"
 )
 
 func StartServer() {
@@ -39,12 +36,7 @@ func StartServer() {
 		return nil
 	})
 
-	// Handle new pastes
-	lmt := tollbooth.NewLimiter(float64(config.Conf.Ratelimit.PastesPerHour / 60.0 / 60.0), &limiter.ExpirableOptions{
-		DefaultExpirationTTL: time.Hour,
-	})
-
-	newHandler := ratelimit.LimitHandler(fasthttp.CompressHandler(handlers.NewHandler), lmt)
+	newHandler := ratelimit.RatelimitHandler(fasthttp.CompressHandler(handlers.NewHandler))
 	router.Get("/new", func(ctx *routing.Context) error {
 		newHandler(ctx.RequestCtx)
 		return nil
