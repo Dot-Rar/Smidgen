@@ -14,7 +14,6 @@ var(
 func RatelimitHandler(next fasthttp.RequestHandler) fasthttp.RequestHandler {
 	return fasthttp.CompressHandler(func(ctx *fasthttp.RequestCtx) {
 		ip := ctx.RemoteIP().String()
-		fmt.Println(ip)
 
 		if _, contains := Pastes[ip]; contains {
 			Pastes[ip] = Pastes[ip] + 1
